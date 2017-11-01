@@ -11,6 +11,7 @@
             templateUrl:'nowhot/nowhot.html',
             controller:'democontro'
         })
+
     }])
 
       app.controller('democontro',['$scope','$http','mydemosev','$routeParams','$route',function($scope,$http,mydemosev,$routeParams,$route){

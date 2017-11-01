@@ -10,6 +10,9 @@
             templateUrl:'home/home.html',
             controller:'homecontroller'
         })
+            .when('/',{
+                redirectTo:'/home_page'
+        })
     }])
 
       app.controller('homecontroller',['$scope',function($scope){
