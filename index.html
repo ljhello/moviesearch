@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>电影展示</title>
+    <style>
+        #heh{
+            width: 80px;
+            font-size: 20px;
+        }
+    </style>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/wap.css">
+</head>
+
+<body ng-app="myapp">
+    <!-- 顶部导航栏开始 -->
+    <div class="top">
+        <div class="header">
+            <a href="#/home_page"><img src="assets/img/logo.jpg" alt="" width="200px" height="80px" style="padding: 0px"></a>
+            <div class="search">
+                <input class="my-input" type="text" placeholder="电影搜索" ng-model="query">
+                <button><a href="#/search?q={{query}}" style="display: block;" id="heh">搜索</a></button>
+            </div>
+        </div>
+        <nav class="nav">
+            <ul>
+                <!--li中添加 active 类样式，显示焦点状态。-->
+                <li class="active" auto-active><a href="#/home_page">首页</a></li>
+                <li auto-active><a href="#/in_theaters">正在热映</a></li>
+                <li auto-active><a href="#/coming_soon">即将上映</a></li>
+                <li auto-active><a href="#/top250">Top250</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- 顶部导航栏结束 -->
+    <div class="container">
+
+        <!-- 首页开始 -->
+        <div ng-view></div>
+        <!-- 首页结束 -->
+        <!--电影列表开始-->
+
+
+        <!--电影列表结束-->
+        <!-- 电影详情开始 -->
+
+        <!-- 电影详情结束 -->
+        <!--其他-->
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <p>版权所有&copy; 刘静静  ---------(允许侵权)</p>
+        </div>
+    </footer>
+    <script src="assets/js/prefixfree.min.js"></script>
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-route/angular-route.js"></script>
+    <script src="allc.js"></script>
+    <script src="home/home.js"></script>
+    <script src="nowhot/nowhot.js"></script>
+   <!-- <script src="coming/coming.js"></script>
+     <script src="top250/topz50.js"></script>-->
+     <script src="service/mysevice.js"></script>
+    <script src="service/autoactive.js"></script>
+<script src="detail/detail.js"></script>
+</body>
+
+</html>
